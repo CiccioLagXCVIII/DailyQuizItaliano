@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Daily Quiz Page</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.11.0/css/flag-icons.min.css"/>
+
+      <!-- Meta Tag per SEO -->
+      <meta name="description" content="Quizzettini Hub: Raccolta definitiva dei migliori daily quiz in italiano.">
+      <meta name="keywords" content="quiz, daily quiz, wordle italiano, quizzettini, quiz italiani, quiz giornalieri, quiz giornalieri italiani, card against humanity online, jeopardy">
+      <meta name="author" content="CiccioLagXCVIII">
+
+      <meta property="og:title" content="Quizzettini">
+      <meta property="og:description" content="Lista Definitiva Dei Migliori Daily Quiz In Italiano">
+      <meta property="og:type" content="website">
+      <meta name="google-site-verification" content="u0sJJAE8O9SMp6hanMPHv9tzD-RTzEw27FfDZ4TBC2w" />
+</head>
+<body>
+
+<nav class="navbar">
+      <div class="nav-container">
+            <div class="nav-left">
+            <span class="brand">Quizzettini</span>
+            <span id="liveClock" class="clock">00:00:00 - 01 Gennaio 0000</span>
+            </div>
+            <div class="nav-right">
+            <div class="searchBox">
+                  <img src="https://img.icons8.com/?size=100&id=ObuWtTlsoTj6&format=png&color=000000">
+                  <input type="text" id="quizSearch" placeholder="Ricerca Quiz Per Nome...">
+            </div>
+            </div>
+      </div>
+</nav>
+
+<div class="container">
+<header class="quiz-header">
+      <img class="flagIT" src="https://img.icons8.com/?size=100&id=DuiAbmWjV0p2&format=png&color=000000" alt="icon">
+      <h1>Daily Quiz</h1>
+      <img class="flagIT" src="https://img.icons8.com/?size=100&id=DuiAbmWjV0p2&format=png&color=000000" alt="icon">
+</header>
+
+<div class="quizList" id="quizList">
+      
+      <!-- Quiz 1 -->
+      <div class="quizItem" data-name="frase fortunata">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=16430&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Frase Fortunata</span>
+      </div>
+            <a href="https://www.ed0.it/quiz/it/lafrasefortunata/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 2 -->
+      <div class="quizItem" data-name="parola chiave">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=4u2Za4KEhPBZ&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Parola Chiave</span>
+      </div>
+      <a href="https://www.ed0.it/quiz/parolachiave/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 3 -->
+      <div class="quizItem" data-name="songless">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=12798&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Songless</span>
+      </div>
+      <a href="https://lessgames.com/songless" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 4 -->
+      <div class="quizItem" data-name="wordle">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=rqLYpg8jzWVx&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Wordle</span>
+      </div>
+      <a href="https://pietroppeter.github.io/wordle-it/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 5 -->
+      <div class="quizItem" data-name="quordle">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=Yvco1VRaFlxA&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Quordle</span>
+      </div>
+      <a href="https://quordlegame.org/it/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 6 -->
+      <div class="quizItem" data-name="minecraftle">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=bWxBNh7b1Am5&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Minecraftle</span>
+      </div>
+      <a href="https://minecraftle.zachmanson.com/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 7 -->
+      <div class="quizItem" data-name="angle">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=vmzMofK2sYWc&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Angle</span>
+      </div>
+      <a href="https://angle.wtf/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 8 -->
+      <div class="quizItem" data-name="guess the angle">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=JhLDZD8XshWi&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Guess The Angle</span>
+      </div>
+      <a href="https://www.ed0.it/quiz/guesstheangle/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 9 -->
+      <div class="quizItem" data-name="crono news">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=n51Ocs3tSUsv&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">CronoNews</span>
+      </div>
+      <a href="https://www.ed0.it/quiz/crononews/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 10 -->
+      <div class="quizItem" data-name="food guesser">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=NQM6qJUwFX5A&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Food Guesser</span>
+      </div>
+      <a href="https://www.foodguessr.com/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 11 -->
+      <div class="quizItem" data-name="gamedle">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=qprk94oC9dfr&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Gamedle</span>
+      </div>
+      <a href="https://www.gamedle.wtf/?lang=it" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 12 -->
+      <div class="quizItem" data-name="guess the age">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=12868&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Guess The Age</span>
+      </div>
+      <a href="https://guesstheage.org/play" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 13 -->
+      <div class="quizItem" data-name="travel">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=g5E79pLF1lVy&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Travel</span>
+      </div>
+      <a href="https://travle.earth/ita" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 14 -->
+      <div class="quizItem" data-name="higher or lower">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=11890&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Higher Or Lower</span>
+      </div>
+      <a href="https://it.higherorlowergame.com/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 15 -->
+      <div class="quizItem" data-name="linkedin or interpol">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=fyFHzE5eO97J&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Linkedin Or Interpol</span>
+      </div>
+      <a href="https://linkedin-or-interpol.com/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 16 -->
+      <div class="quizItem" data-name="jeopardy">
+      <div class="quizBox">
+            <div class="quizIcon">
+                  <img src="https://img.icons8.com/?size=100&id=12244&format=png&color=000000" alt="icon">
+            </div>
+            <span class="quizName">Jeopardy</span>
+      </div>
+      <a href="https://jeopardylabs.com/" target="_blank" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 17 -->
+      <div class="quizGroup">
+            <div class="quizItem" data-name="card against humanity">
+                  <div class="quizBox">
+                        <div class="quizIcon">
+                              <img src="https://img.icons8.com/?size=100&id=0tFJk8lXV7AI&format=png&color=000000" alt="icon">
+                        </div>
+                        <span class="quizName">Card Against Humanity</span>
+                  </div>
+                  <button class="btn-go btn-dropdown-toggle" onclick="toggleDropdown('cah-dropdown')">
+                        Opzioni <img src="https://img.icons8.com/ios-glyphs/30/ffffff/expand-arrow.png" class="icon-chevron" style="width:14px; margin-left:5px;">
+                  </button>
+            </div>
+
+            <div class="quizDropdown" id="cah-dropdown">
+                  <div class="subQuizItem" data-name="pretend clrtd">
+                        <span class="subQuizName">Pretend You're CLRTD</span>
+                        <a href="https://xyzzy.clrtd.com/zy/game.jsp" target="_blank" class="btn-sub-go">Vai</a>
+                  </div>
+                  <div class="subQuizItem" data-name="mazzi cah">
+                        <span class="subQuizName">Mazzi</span>
+                        <a href="https://cast.clrtd.com/decks" target="_blank" class="btn-sub-go">Vai</a>
+                  </div>
+
+                  <div class="dropdown-info">
+                        Per aggiungere i mazzi, scrivi nella chat della partita: <br>
+                        <code>/addcardcast CODICE</code>
+                  </div>
+            </div>
+      </div>
+</div>
+
+<footer>
+      <p>© 2025 Quizzettini Hub • Creato con ❤️ da CiccioLagXCVIII</p>
+</footer>
+
+<script>
+// Funzione Orologio e Data
+function updateClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit'});
+      let month = now.toLocaleDateString('it-IT', { month: 'long' });
+      month = month.charAt(0).toUpperCase() + month.slice(1);
+      let day = now.toLocaleDateString('it-IT', { day: '2-digit' });
+      let year = now.toLocaleDateString('it-IT', { year: 'numeric' });
+      document.getElementById('liveClock').textContent = `${day} ${month} ${year} - ${timeStr}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// Funzione Dropdown
+function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      const button = event.currentTarget;
+      dropdown.classList.toggle('show');
+      button.classList.toggle('active');
+}
+
+// Funzione di Ricerca
+const searchInput = document.getElementById('quizSearch');
+searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      document.querySelectorAll('.quizItem').forEach(item => {
+            const name = item.getAttribute('data-name');
+            item.style.display = name.includes(term) ? 'flex' : 'none';
+      });
+});
+
+// Funzione Stato Giocato
+
+// Lista Quiz Esclusi
+const excludedQuizzes = [
+      "higher_or_lower", 
+      "linkedin_or_interpol", 
+      "jeopardy", 
+      "card_against_humanity"
+];
+
+function markAsPlayed(name) {
+      if (!excludedQuizzes.includes(name)) {
+            const now = new Date().getTime();
+            localStorage.setItem('played_' + name, now);
+            checkPlayedStatus();
+      }
+}
+
+function checkPlayedStatus() {
+      const now = new Date().getTime();
+      const expiration = 24 * 60 * 60 * 1000; // 24 ore
+
+      document.querySelectorAll('.quizItem, .subQuizItem').forEach(item => {
+            const name = item.getAttribute('data-name');
+            
+            // Se il quiz è tra quelli esclusi, saltiamo il controllo
+            if (excludedQuizzes.includes(name)) return;
+
+            const playedTime = localStorage.getItem('played_' + name);
+
+            if (playedTime) {
+                  if (now - playedTime < expiration) {
+                        item.classList.add('played-mode');
+                        if (!item.querySelector('.check-mark')) {
+                              const quizNameSpan = item.querySelector('.quizName') || item.querySelector('.subQuizName');
+                              const check = document.createElement('img');
+                              check.src = "https://img.icons8.com/fluency/48/checkmark.png";
+                              check.className = "check-mark";
+                              check.style = "width:18px; margin-left:10px; vertical-align:middle;";
+                              quizNameSpan.appendChild(check);
+                        }
+                  } else {
+                        localStorage.removeItem('played_' + name);
+                        item.classList.remove('played-mode');
+                  }
+            }
+      });
+}
+
+// Listener Buttons
+document.querySelectorAll('.btn-go, .btn-sub-go').forEach(btn => {
+      btn.addEventListener('click', function() {
+            // Cerchiamo il data-name nel quizItem o subQuizItem più vicino
+            const parent = this.closest('.quizItem') || this.closest('.subQuizItem');
+            const name = parent.getAttribute('data-name');
+            
+            markAsPlayed(name);
+      });
+});
+
+// Esegui al caricamento
+checkPlayedStatus();
+
+
+</script>
+
+</body>
+</html>
