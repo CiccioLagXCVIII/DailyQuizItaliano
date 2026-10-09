@@ -3,6 +3,9 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="color-scheme" content="dark light">
+      <meta name="theme-color" content="#0c1017" media="(prefers-color-scheme: dark)">
+      <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
       <title>Daily Quiz Page</title>
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,237 +23,298 @@
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Navigazione principale">
       <div class="nav-container">
             <div class="nav-left">
-            <span class="brand">Quizzettini</span>
-            <span id="liveClock" class="clock">00:00:00 - 01 Gennaio 0000</span>
+                  <span class="brand">Quizzettini</span>
+                  <span id="liveClock" class="clock" aria-live="polite">00:00:00 - 01 Gennaio 0000</span>
             </div>
             <div class="nav-right">
-            <div class="searchBox">
-                  <img src="https://img.icons8.com/?size=100&id=ObuWtTlsoTj6&format=png&color=000000">
-                  <input type="text" id="quizSearch" placeholder="Ricerca Quiz Per Nome...">
-            </div>
+                  <div class="searchBox">
+                        <svg class="search-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="11" cy="11" r="8"></circle>
+                              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="search" id="quizSearch" placeholder="Ricerca Quiz Per Nome..." aria-label="Ricerca quiz per nome">
+                  </div>
             </div>
       </div>
 </nav>
 
-<div class="container">
+<main class="container">
 <header class="quiz-header">
-      <img class="flagIT" src="https://img.icons8.com/?size=100&id=DuiAbmWjV0p2&format=png&color=000000" alt="icon">
+      <img class="flagIT" src="https://img.icons8.com/?size=100&id=DuiAbmWjV0p2&format=png&color=000000" alt="Bandiera italiana" width="30" height="30" loading="lazy">
       <h1>Daily Quiz</h1>
-      <img class="flagIT" src="https://img.icons8.com/?size=100&id=DuiAbmWjV0p2&format=png&color=000000" alt="icon">
+      <img class="flagIT" src="https://img.icons8.com/?size=100&id=DuiAbmWjV0p2&format=png&color=000000" alt="Bandiera italiana" width="30" height="30" loading="lazy">
 </header>
+
+<!-- Progress Bar Card -->
+<div class="progress-card" aria-label="Progresso quiz giornalieri">
+      <div class="progress-header">
+            <div class="progress-info">
+                  <span class="progress-title">Progresso di oggi</span>
+                  <span class="progress-stats" id="progressStats">0 di 0 completati (0%)</span>
+            </div>
+            <button type="button" id="btnRandomQuiz" class="btn-random" title="Scegli un quiz casuale non ancora completato">
+                  <svg class="dice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <circle cx="15.5" cy="8.5" r="1.5"/>
+                        <circle cx="12" cy="12" r="1.5"/>
+                        <circle cx="8.5" cy="15.5" r="1.5"/>
+                        <circle cx="15.5" cy="15.5" r="1.5"/>
+                  </svg>
+                  <span>Sorprendimi</span>
+            </button>
+      </div>
+      <div class="progress-track" role="progressbar" id="progressBarTrack" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" id="progressBarFill" style="width: 0%;"></div>
+      </div>
+</div>
+
+<!-- Category Filters -->
+<div class="category-filters" role="tablist" aria-label="Filtra quiz per categoria">
+      <button type="button" class="category-pill active" data-category="all" role="tab" aria-selected="true">Tutti</button>
+      <button type="button" class="category-pill" data-category="parole" role="tab" aria-selected="false">Parole & Enigmi</button>
+      <button type="button" class="category-pill" data-category="geografia" role="tab" aria-selected="false">Geografia</button>
+      <button type="button" class="category-pill" data-category="media" role="tab" aria-selected="false">Cultura & Media</button>
+      <button type="button" class="category-pill" data-category="party" role="tab" aria-selected="false">Party & Illimitati</button>
+</div>
 
 <div class="quizList" id="quizList">
       
       <!-- Quiz 1 -->
-      <div class="quizItem" data-name="frase fortunata">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=16430&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="frase fortunata" data-category="parole">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=16430&format=png&color=000000" alt="icona Frase Fortunata" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Frase Fortunata</span>
             </div>
-            <span class="quizName">Frase Fortunata</span>
-      </div>
-            <a href="https://www.ed0.it/quiz/it/lafrasefortunata/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://www.ed0.it/quiz/it/lafrasefortunata/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 2 -->
-      <div class="quizItem" data-name="parola chiave">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=4u2Za4KEhPBZ&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="parola chiave" data-category="parole">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=4u2Za4KEhPBZ&format=png&color=000000" alt="icona Parola Chiave" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Parola Chiave</span>
             </div>
-            <span class="quizName">Parola Chiave</span>
-      </div>
-      <a href="https://www.ed0.it/quiz/parolachiave/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://www.ed0.it/quiz/parolachiave/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 3 -->
-      <div class="quizItem" data-name="songless">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=12798&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="songless" data-category="media">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=12798&format=png&color=000000" alt="icona Songless" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Songless</span>
             </div>
-            <span class="quizName">Songless</span>
-      </div>
-      <a href="https://lessgames.com/songless" target="_blank" class="btn-go">Apri</a>
+            <a href="https://lessgames.com/songless" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 4 -->
-      <div class="quizItem" data-name="wordle">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=rqLYpg8jzWVx&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="wordle" data-category="parole">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=rqLYpg8jzWVx&format=png&color=000000" alt="icona Wordle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Wordle</span>
             </div>
-            <span class="quizName">Wordle</span>
-      </div>
-      <a href="https://pietroppeter.github.io/wordle-it/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://pietroppeter.github.io/wordle-it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 5 -->
-      <div class="quizItem" data-name="quordle">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=Yvco1VRaFlxA&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="quordle" data-category="parole">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=Yvco1VRaFlxA&format=png&color=000000" alt="icona Quordle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Quordle</span>
             </div>
-            <span class="quizName">Quordle</span>
-      </div>
-      <a href="https://quordlegame.org/it/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://quordlegame.org/it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
-      <!-- Quiz 6 -->
-      <div class="quizItem" data-name="minecraftle">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=bWxBNh7b1Am5&format=png&color=000000" alt="icon">
+      <!-- Quiz 6 (Nuovo) -->
+      <div class="quizItem" data-name="fuochino" data-category="parole">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/fluency/48/fire-element.png" alt="icona Fuochino" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Fuochino</span>
             </div>
-            <span class="quizName">Minecraftle</span>
-      </div>
-      <a href="https://minecraftle.zachmanson.com/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://fuochino.it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 7 -->
-      <div class="quizItem" data-name="angle">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=vmzMofK2sYWc&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="minecraftle" data-category="media">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=bWxBNh7b1Am5&format=png&color=000000" alt="icona Minecraftle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Minecraftle</span>
             </div>
-            <span class="quizName">Angle</span>
-      </div>
-      <a href="https://angle.wtf/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://minecraftle.zachmanson.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 8 -->
-      <div class="quizItem" data-name="guess the angle">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=JhLDZD8XshWi&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="angle" data-category="geografia">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=vmzMofK2sYWc&format=png&color=000000" alt="icona Angle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Angle</span>
             </div>
-            <span class="quizName">Guess The Angle</span>
-      </div>
-      <a href="https://www.ed0.it/quiz/guesstheangle/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://angle.wtf/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 9 -->
-      <div class="quizItem" data-name="crono news">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=n51Ocs3tSUsv&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="guess the angle" data-category="geografia">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=JhLDZD8XshWi&format=png&color=000000" alt="icona Guess The Angle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Guess The Angle</span>
             </div>
-            <span class="quizName">CronoNews</span>
-      </div>
-      <a href="https://www.ed0.it/quiz/crononews/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://www.ed0.it/quiz/guesstheangle/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 10 -->
-      <div class="quizItem" data-name="food guesser">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=NQM6qJUwFX5A&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="travel" data-category="geografia">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=g5E79pLF1lVy&format=png&color=000000" alt="icona Travel" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Travel</span>
             </div>
-            <span class="quizName">Food Guesser</span>
-      </div>
-      <a href="https://www.foodguessr.com/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://travle.earth/ita" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
-      <!-- Quiz 11 -->
-      <div class="quizItem" data-name="gamedle">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=qprk94oC9dfr&format=png&color=000000" alt="icon">
+      <!-- Quiz 11 (Nuovo) -->
+      <div class="quizItem" data-name="globle" data-category="geografia">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/fluency/48/earth-planet.png" alt="icona Globle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Globle</span>
             </div>
-            <span class="quizName">Gamedle</span>
-      </div>
-      <a href="https://www.gamedle.wtf/?lang=it" target="_blank" class="btn-go">Apri</a>
+            <a href="https://globle-game.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 12 -->
-      <div class="quizItem" data-name="travel">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=g5E79pLF1lVy&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="crono news" data-category="media">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=n51Ocs3tSUsv&format=png&color=000000" alt="icona CronoNews" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">CronoNews</span>
             </div>
-            <span class="quizName">Travel</span>
-      </div>
-      <a href="https://travle.earth/ita" target="_blank" class="btn-go">Apri</a>
+            <a href="https://www.ed0.it/quiz/crononews/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 13 -->
-      <div class="quizItem" data-name="guess the age">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=12868&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="food guesser" data-category="media">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=NQM6qJUwFX5A&format=png&color=000000" alt="icona Food Guesser" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Food Guesser</span>
             </div>
-            <span class="quizName">Guess The Age</span>
-      </div>
-      <a href="https://guesstheage.org/play" target="_blank" class="btn-go">Apri</a>
+            <a href="https://www.foodguessr.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 14 -->
-      <div class="quizItem" data-name="higher or lower">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=11890&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="gamedle" data-category="media">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=qprk94oC9dfr&format=png&color=000000" alt="icona Gamedle" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Gamedle</span>
             </div>
-            <span class="quizName">Higher Or Lower</span>
-      </div>
-      <a href="https://it.higherorlowergame.com/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://www.gamedle.wtf/?lang=it" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 15 -->
-      <div class="quizItem" data-name="linkedin or interpol">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=fyFHzE5eO97J&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="guess the age" data-category="media">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=12868&format=png&color=000000" alt="icona Guess The Age" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Guess The Age</span>
             </div>
-            <span class="quizName">Linkedin Or Interpol</span>
-      </div>
-      <a href="https://linkedin-or-interpol.com/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://guesstheage.org/play" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 16 -->
-      <div class="quizItem" data-name="jeopardy">
-      <div class="quizBox">
-            <div class="quizIcon">
-                  <img src="https://img.icons8.com/?size=100&id=12244&format=png&color=000000" alt="icon">
+      <div class="quizItem" data-name="higher or lower" data-category="party">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=11890&format=png&color=000000" alt="icona Higher Or Lower" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Higher Or Lower <span class="badge-infinite">Illimitato</span></span>
             </div>
-            <span class="quizName">Jeopardy</span>
-      </div>
-      <a href="https://jeopardylabs.com/" target="_blank" class="btn-go">Apri</a>
+            <a href="https://it.higherorlowergame.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
       </div>
 
       <!-- Quiz 17 -->
-      <div class="quizGroup">
-            <div class="quizItem" data-name="card against humanity">
+      <div class="quizItem" data-name="linkedin or interpol" data-category="party">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=fyFHzE5eO97J&format=png&color=000000" alt="icona Linkedin Or Interpol" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Linkedin Or Interpol <span class="badge-infinite">Illimitato</span></span>
+            </div>
+            <a href="https://linkedin-or-interpol.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 18 -->
+      <div class="quizItem" data-name="jeopardy" data-category="party">
+            <div class="quizBox">
+                  <div class="quizIcon">
+                        <img src="https://img.icons8.com/?size=100&id=12244&format=png&color=000000" alt="icona Jeopardy" width="28" height="28" loading="lazy">
+                  </div>
+                  <span class="quizName">Jeopardy <span class="badge-infinite">Illimitato</span></span>
+            </div>
+            <a href="https://jeopardylabs.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+      </div>
+
+      <!-- Quiz 19 -->
+      <div class="quizGroup" data-category="party">
+            <div class="quizItem" data-name="card against humanity" data-category="party">
                   <div class="quizBox">
                         <div class="quizIcon">
-                              <img src="https://img.icons8.com/?size=100&id=0tFJk8lXV7AI&format=png&color=000000" alt="icon">
+                              <img src="https://img.icons8.com/?size=100&id=0tFJk8lXV7AI&format=png&color=000000" alt="icona Card Against Humanity" width="28" height="28" loading="lazy">
                         </div>
-                        <span class="quizName">Card Against Humanity</span>
+                        <span class="quizName">Card Against Humanity <span class="badge-infinite">Illimitato</span></span>
                   </div>
-                  <button class="btn-go btn-dropdown-toggle" onclick="toggleDropdown('cah-dropdown')">
-                        Opzioni <img src="https://img.icons8.com/ios-glyphs/30/ffffff/expand-arrow.png" class="icon-chevron" style="width:14px; margin-left:5px;">
+                  <button type="button" class="btn-go btn-dropdown-toggle" onclick="toggleDropdown('cah-dropdown', event)" aria-expanded="false" aria-controls="cah-dropdown">
+                        Opzioni
+                        <svg class="icon-chevron" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                   </button>
             </div>
 
             <div class="quizDropdown" id="cah-dropdown">
                   <div class="subQuizItem" data-name="pretend clrtd">
                         <span class="subQuizName">Pretend You're CLRTD</span>
-                        <a href="https://xyzzy.clrtd.com/zy/game.jsp" target="_blank" class="btn-sub-go">Vai</a>
+                        <a href="https://xyzzygame.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-sub-go">Vai</a>
                   </div>
                   <div class="subQuizItem" data-name="mazzi cah">
                         <span class="subQuizName">Mazzi</span>
-                        <a href="https://cast.clrtd.com/decks" target="_blank" class="btn-sub-go">Vai</a>
+                        <a href="https://cast.clrtd.com/decks" target="_blank" rel="noopener noreferrer" class="btn-sub-go">Vai</a>
                   </div>
 
                   <div class="dropdown-info">
-                        Per aggiungere i mazzi, scrivi nella chat della partita: <br>
-                        <code>/addcardcast CODICE</code>
+                        Il link porta alla versione <strong>LagXCVII</strong> del sito di Card Against Humanity, in cui puoi inserire i codici dei mazzi custom direttamente nei settaggi della partita (senza bisogno di comandi in chat).
                   </div>
             </div>
       </div>
 </div>
+</main>
 
 <footer>
       <p>© 2025 Quizzettini Hub • Creato con ❤️ da CiccioLagXCVIII</p>
@@ -271,37 +335,119 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // Funzione Dropdown
-function toggleDropdown(id) {
+function toggleDropdown(id, evt) {
       const dropdown = document.getElementById(id);
-      const button = event.currentTarget;
-      dropdown.classList.toggle('show');
-      button.classList.toggle('active');
+      const button = (evt && evt.currentTarget) ? evt.currentTarget : (window.event ? window.event.currentTarget : null);
+      const isOpen = dropdown.classList.toggle('show');
+      if (button) {
+            button.classList.toggle('active', isOpen);
+            button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      }
 }
 
-// Funzione di Ricerca
-const searchInput = document.getElementById('quizSearch');
-searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase();
-      document.querySelectorAll('.quizItem').forEach(item => {
-            const name = item.getAttribute('data-name');
-            item.style.display = name.includes(term) ? 'flex' : 'none';
-      });
-});
-
-// Funzione Stato Giocato
-
-// Lista Quiz Esclusi
+// Lista Quiz Esclusi (giochi non giornalieri, replayable / multiplayer)
 const excludedQuizzes = [
       "higher or lower", 
       "linkedin or interpol", 
       "jeopardy", 
       "card against humanity",
-      "guess the angle",
-      "guess the age",
       "pretend clrtd",
       "mazzi cah"
 ];
 
+// Filtri per Ricerca e Categoria
+const searchInput = document.getElementById('quizSearch');
+
+function applyFilters() {
+      const term = searchInput.value.toLowerCase().trim();
+      const activePill = document.querySelector('.category-pill.active');
+      const activeCategory = activePill ? activePill.getAttribute('data-category') : 'all';
+
+      document.querySelectorAll('.quizItem, .quizGroup').forEach(el => {
+            const isGroup = el.classList.contains('quizGroup');
+            const target = isGroup ? el.querySelector('.quizItem') : el;
+            if (!target) return;
+
+            const name = (target.getAttribute('data-name') || '').toLowerCase();
+            const category = target.getAttribute('data-category') || '';
+
+            const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+            const matchesSearch = term === '' || name.includes(term) || (isGroup && Array.from(el.querySelectorAll('.subQuizItem')).some(sub => (sub.getAttribute('data-name') || '').toLowerCase().includes(term)));
+
+            el.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
+      });
+}
+
+// Listener Pillole Categoria
+document.querySelectorAll('.category-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+            document.querySelectorAll('.category-pill').forEach(p => {
+                  p.classList.remove('active');
+                  p.setAttribute('aria-selected', 'false');
+            });
+            pill.classList.add('active');
+            pill.setAttribute('aria-selected', 'true');
+            applyFilters();
+      });
+});
+
+searchInput.addEventListener('input', applyFilters);
+
+// Barra di Progresso Giornaliera
+function updateProgressBar() {
+      const dailyItems = Array.from(document.querySelectorAll('.quizItem')).filter(item => {
+            const name = item.getAttribute('data-name');
+            return !excludedQuizzes.includes(name);
+      });
+
+      const total = dailyItems.length;
+      const completed = dailyItems.filter(item => item.classList.contains('played-mode')).length;
+      const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+      const statsEl = document.getElementById('progressStats');
+      const barFill = document.getElementById('progressBarFill');
+      const barTrack = document.getElementById('progressBarTrack');
+
+      if (statsEl) statsEl.textContent = `${completed} di ${total} completati (${percentage}%)`;
+      if (barFill) barFill.style.width = `${percentage}%`;
+      if (barTrack) barTrack.setAttribute('aria-valuenow', percentage);
+}
+
+// Bottone Sorprendimi (Quiz Casuale)
+const btnRandom = document.getElementById('btnRandomQuiz');
+if (btnRandom) {
+      btnRandom.addEventListener('click', () => {
+            const unplayed = Array.from(document.querySelectorAll('.quizItem')).filter(item => {
+                  const name = item.getAttribute('data-name');
+                  return !excludedQuizzes.includes(name) && !item.classList.contains('played-mode');
+            });
+
+            const pool = unplayed.length > 0 ? unplayed : Array.from(document.querySelectorAll('.quizItem')).filter(item => {
+                  const name = item.getAttribute('data-name');
+                  return !excludedQuizzes.includes(name);
+            });
+
+            if (pool.length === 0) return;
+
+            const chosen = pool[Math.floor(Math.random() * pool.length)];
+
+            // Ripristina filtri su 'Tutti' per garantire la visibilità
+            document.querySelectorAll('.category-pill').forEach(p => {
+                  const isAll = p.getAttribute('data-category') === 'all';
+                  p.classList.toggle('active', isAll);
+                  p.setAttribute('aria-selected', isAll ? 'true' : 'false');
+            });
+            searchInput.value = '';
+            applyFilters();
+
+            chosen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            chosen.classList.remove('highlight-pulse');
+            void chosen.offsetWidth; // Reflow
+            chosen.classList.add('highlight-pulse');
+      });
+}
+
+// Funzione Stato Giocato
 function markAsPlayed(name) {
       if (!excludedQuizzes.includes(name)) {
             const now = new Date().getTime();
@@ -330,7 +476,9 @@ function checkPlayedStatus() {
                               const check = document.createElement('img');
                               check.src = "https://img.icons8.com/fluency/48/checkmark.png";
                               check.className = "check-mark";
-                              check.style = "width:18px; margin-left:10px; vertical-align:middle;";
+                              check.alt = "Completato";
+                              check.width = 18;
+                              check.height = 18;
                               quizNameSpan.appendChild(check);
                         }
                   } else {
@@ -339,23 +487,21 @@ function checkPlayedStatus() {
                   }
             }
       });
+
+      updateProgressBar();
 }
 
 // Listener Buttons
 document.querySelectorAll('.btn-go, .btn-sub-go').forEach(btn => {
       btn.addEventListener('click', function() {
-            // Cerchiamo il data-name nel quizItem o subQuizItem più vicino
             const parent = this.closest('.quizItem') || this.closest('.subQuizItem');
             const name = parent.getAttribute('data-name');
-            
             markAsPlayed(name);
       });
 });
 
 // Esegui al caricamento
 checkPlayedStatus();
-
-
 </script>
 
 </body>

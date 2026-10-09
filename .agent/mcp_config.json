@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "developer-knowledge": {
+      "command": "npx",
+      "args": ["-y", "@google/developer-knowledge-mcp"]
+    }
+  }
+}
