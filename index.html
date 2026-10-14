@@ -49,11 +49,11 @@
 </header>
 
 <!-- Progress Bar Card -->
-<div class="progress-card" aria-label="Progresso quiz giornalieri">
+<div class="progress-card" aria-label="Progresso quiz completati">
       <div class="progress-header">
             <div class="progress-info">
                   <span class="progress-title">Progresso di oggi</span>
-                  <span class="progress-stats" id="progressStats">0 di 0 completati (0%)</span>
+                  <span class="progress-stats" id="progressStats">0 di 17 completati (0%)</span>
             </div>
             <button type="button" id="btnRandomQuiz" class="btn-random" title="Scegli un quiz casuale non ancora completato">
                   <svg class="dice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -89,9 +89,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=16430&format=png&color=000000" alt="icona Frase Fortunata" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Frase Fortunata</span>
+                  <div class="quizText">
+                        <span class="quizName">Frase Fortunata</span>
+                  </div>
             </div>
-            <a href="https://www.ed0.it/quiz/it/lafrasefortunata/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://www.ed0.it/quiz/it/lafrasefortunata/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 2 -->
@@ -100,9 +109,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=4u2Za4KEhPBZ&format=png&color=000000" alt="icona Parola Chiave" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Parola Chiave</span>
+                  <div class="quizText">
+                        <span class="quizName">Parola Chiave</span>
+                  </div>
             </div>
-            <a href="https://www.ed0.it/quiz/parolachiave/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://www.ed0.it/quiz/parolachiave/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 3 -->
@@ -111,9 +129,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=12798&format=png&color=000000" alt="icona Songless" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Songless</span>
+                  <div class="quizText">
+                        <span class="quizName">Songless</span>
+                  </div>
             </div>
-            <a href="https://lessgames.com/songless" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://lessgames.com/songless" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 4 -->
@@ -122,9 +149,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=rqLYpg8jzWVx&format=png&color=000000" alt="icona Wordle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Wordle</span>
+                  <div class="quizText">
+                        <span class="quizName">Wordle</span>
+                  </div>
             </div>
-            <a href="https://pietroppeter.github.io/wordle-it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://pietroppeter.github.io/wordle-it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 5 -->
@@ -133,20 +169,38 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=Yvco1VRaFlxA&format=png&color=000000" alt="icona Quordle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Quordle</span>
+                  <div class="quizText">
+                        <span class="quizName">Quordle</span>
+                  </div>
             </div>
-            <a href="https://quordlegame.org/it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://quordlegame.org/it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
-      <!-- Quiz 6 (Nuovo) -->
+      <!-- Quiz 6 -->
       <div class="quizItem" data-name="fuochino" data-category="parole">
             <div class="quizBox">
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/fluency/48/fire-element.png" alt="icona Fuochino" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Fuochino</span>
+                  <div class="quizText">
+                        <span class="quizName">Fuochino</span>
+                  </div>
             </div>
-            <a href="https://fuochino.it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://fuochino.it/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 7 -->
@@ -155,9 +209,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=bWxBNh7b1Am5&format=png&color=000000" alt="icona Minecraftle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Minecraftle</span>
+                  <div class="quizText">
+                        <span class="quizName">Minecraftle</span>
+                  </div>
             </div>
-            <a href="https://minecraftle.zachmanson.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://minecraftle.zachmanson.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 8 -->
@@ -166,9 +229,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=vmzMofK2sYWc&format=png&color=000000" alt="icona Angle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Angle</span>
+                  <div class="quizText">
+                        <span class="quizName">Angle</span>
+                  </div>
             </div>
-            <a href="https://angle.wtf/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://angle.wtf/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 9 -->
@@ -177,9 +249,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=JhLDZD8XshWi&format=png&color=000000" alt="icona Guess The Angle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Guess The Angle</span>
+                  <div class="quizText">
+                        <span class="quizName">Guess The Angle</span>
+                  </div>
             </div>
-            <a href="https://www.ed0.it/quiz/guesstheangle/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://www.ed0.it/quiz/guesstheangle/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 10 -->
@@ -188,20 +269,38 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=g5E79pLF1lVy&format=png&color=000000" alt="icona Travel" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Travel</span>
+                  <div class="quizText">
+                        <span class="quizName">Travel</span>
+                  </div>
             </div>
-            <a href="https://travle.earth/ita" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://travle.earth/ita" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
-      <!-- Quiz 11 (Nuovo) -->
+      <!-- Quiz 11 -->
       <div class="quizItem" data-name="globle" data-category="geografia">
             <div class="quizBox">
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/fluency/48/earth-planet.png" alt="icona Globle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Globle</span>
+                  <div class="quizText">
+                        <span class="quizName">Globle</span>
+                  </div>
             </div>
-            <a href="https://globle-game.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://globle-game.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 12 -->
@@ -210,9 +309,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=n51Ocs3tSUsv&format=png&color=000000" alt="icona CronoNews" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">CronoNews</span>
+                  <div class="quizText">
+                        <span class="quizName">CronoNews</span>
+                  </div>
             </div>
-            <a href="https://www.ed0.it/quiz/crononews/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://www.ed0.it/quiz/crononews/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 13 -->
@@ -221,9 +329,18 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=NQM6qJUwFX5A&format=png&color=000000" alt="icona Food Guesser" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Food Guesser</span>
+                  <div class="quizText">
+                        <span class="quizName">Food Guesser</span>
+                  </div>
             </div>
-            <a href="https://www.foodguessr.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://www.foodguessr.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
       <!-- Quiz 14 -->
@@ -232,70 +349,119 @@
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=qprk94oC9dfr&format=png&color=000000" alt="icona Gamedle" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Gamedle</span>
+                  <div class="quizText">
+                        <span class="quizName">Gamedle</span>
+                  </div>
             </div>
-            <a href="https://www.gamedle.wtf/?lang=it" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://www.gamedle.wtf/?lang=it" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
-      <!-- Quiz 15 -->
-      <div class="quizItem" data-name="guess the age" data-category="media">
+      <!-- Quiz 15 (Illimitato) -->
+      <div class="quizItem" data-name="guess the age" data-category="party">
             <div class="quizBox">
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=12868&format=png&color=000000" alt="icona Guess The Age" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Guess The Age</span>
+                  <div class="quizText">
+                        <span class="quizName">Guess The Age</span>
+                        <span class="badge-infinite">Illimitato</span>
+                  </div>
             </div>
-            <a href="https://guesstheage.org/play" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://guesstheage.org/play" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
-      <!-- Quiz 16 -->
+      <!-- Quiz 16 (Illimitato) -->
       <div class="quizItem" data-name="higher or lower" data-category="party">
             <div class="quizBox">
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=11890&format=png&color=000000" alt="icona Higher Or Lower" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Higher Or Lower <span class="badge-infinite">Illimitato</span></span>
+                  <div class="quizText">
+                        <span class="quizName">Higher Or Lower</span>
+                        <span class="badge-infinite">Illimitato</span>
+                  </div>
             </div>
-            <a href="https://it.higherorlowergame.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://it.higherorlowergame.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
-      <!-- Quiz 17 -->
+      <!-- Quiz 17 (Illimitato) -->
       <div class="quizItem" data-name="linkedin or interpol" data-category="party">
             <div class="quizBox">
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=fyFHzE5eO97J&format=png&color=000000" alt="icona Linkedin Or Interpol" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Linkedin Or Interpol <span class="badge-infinite">Illimitato</span></span>
+                  <div class="quizText">
+                        <span class="quizName">Linkedin Or Interpol</span>
+                        <span class="badge-infinite">Illimitato</span>
+                  </div>
             </div>
-            <a href="https://linkedin-or-interpol.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://linkedin-or-interpol.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+                  <button type="button" class="btn-win" aria-label="Segna come completato" title="Segna come completato" aria-pressed="false">
+                        <svg class="icon-win" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                  </button>
+            </div>
       </div>
 
-      <!-- Quiz 18 -->
+      <!-- Quiz 18 (Illimitato - Nessun pulsante vittoria) -->
       <div class="quizItem" data-name="jeopardy" data-category="party">
             <div class="quizBox">
                   <div class="quizIcon">
                         <img src="https://img.icons8.com/?size=100&id=12244&format=png&color=000000" alt="icona Jeopardy" width="28" height="28" loading="lazy">
                   </div>
-                  <span class="quizName">Jeopardy <span class="badge-infinite">Illimitato</span></span>
+                  <div class="quizText">
+                        <span class="quizName">Jeopardy</span>
+                        <span class="badge-infinite">Illimitato</span>
+                  </div>
             </div>
-            <a href="https://jeopardylabs.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            <div class="quizActions">
+                  <a href="https://jeopardylabs.com/" target="_blank" rel="noopener noreferrer" class="btn-go">Apri</a>
+            </div>
       </div>
 
-      <!-- Quiz 19 -->
+      <!-- Quiz 19 (Illimitato - Nessun pulsante vittoria) -->
       <div class="quizGroup" data-category="party">
             <div class="quizItem" data-name="card against humanity" data-category="party">
                   <div class="quizBox">
                         <div class="quizIcon">
                               <img src="https://img.icons8.com/?size=100&id=0tFJk8lXV7AI&format=png&color=000000" alt="icona Card Against Humanity" width="28" height="28" loading="lazy">
                         </div>
-                        <span class="quizName">Card Against Humanity <span class="badge-infinite">Illimitato</span></span>
+                        <div class="quizText">
+                              <span class="quizName">Card Against Humanity</span>
+                              <span class="badge-infinite">Illimitato</span>
+                        </div>
                   </div>
-                  <button type="button" class="btn-go btn-dropdown-toggle" onclick="toggleDropdown('cah-dropdown', event)" aria-expanded="false" aria-controls="cah-dropdown">
-                        Opzioni
-                        <svg class="icon-chevron" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                              <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                  </button>
+                  <div class="quizActions">
+                        <button type="button" class="btn-go btn-dropdown-toggle" onclick="toggleDropdown('cah-dropdown', event)" aria-expanded="false" aria-controls="cah-dropdown">
+                              Opzioni
+                              <svg class="icon-chevron" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                        </button>
+                  </div>
             </div>
 
             <div class="quizDropdown" id="cah-dropdown">
@@ -345,16 +511,6 @@ function toggleDropdown(id, evt) {
       }
 }
 
-// Lista Quiz Esclusi (giochi non giornalieri, replayable / multiplayer)
-const excludedQuizzes = [
-      "higher or lower", 
-      "linkedin or interpol", 
-      "jeopardy", 
-      "card against humanity",
-      "pretend clrtd",
-      "mazzi cah"
-];
-
 // Filtri per Ricerca e Categoria
 const searchInput = document.getElementById('quizSearch');
 
@@ -393,15 +549,14 @@ document.querySelectorAll('.category-pill').forEach(pill => {
 
 searchInput.addEventListener('input', applyFilters);
 
-// Barra di Progresso Giornaliera
+// Barra di Progresso (Conta tutti i quiz che hanno il pulsante vittoria)
 function updateProgressBar() {
-      const dailyItems = Array.from(document.querySelectorAll('.quizItem')).filter(item => {
-            const name = item.getAttribute('data-name');
-            return !excludedQuizzes.includes(name);
+      const winnableItems = Array.from(document.querySelectorAll('.quizItem')).filter(item => {
+            return !!item.querySelector('.btn-win');
       });
 
-      const total = dailyItems.length;
-      const completed = dailyItems.filter(item => item.classList.contains('played-mode')).length;
+      const total = winnableItems.length;
+      const completed = winnableItems.filter(item => item.classList.contains('played-mode')).length;
       const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
       const statsEl = document.getElementById('progressStats');
@@ -413,18 +568,16 @@ function updateProgressBar() {
       if (barTrack) barTrack.setAttribute('aria-valuenow', percentage);
 }
 
-// Bottone Sorprendimi (Quiz Casuale)
+// Bottone Sorprendimi (Quiz Casuale tra quelli non ancora completati)
 const btnRandom = document.getElementById('btnRandomQuiz');
 if (btnRandom) {
       btnRandom.addEventListener('click', () => {
             const unplayed = Array.from(document.querySelectorAll('.quizItem')).filter(item => {
-                  const name = item.getAttribute('data-name');
-                  return !excludedQuizzes.includes(name) && !item.classList.contains('played-mode');
+                  return !!item.querySelector('.btn-win') && !item.classList.contains('played-mode');
             });
 
             const pool = unplayed.length > 0 ? unplayed : Array.from(document.querySelectorAll('.quizItem')).filter(item => {
-                  const name = item.getAttribute('data-name');
-                  return !excludedQuizzes.includes(name);
+                  return !!item.querySelector('.btn-win');
             });
 
             if (pool.length === 0) return;
@@ -447,56 +600,77 @@ if (btnRandom) {
       });
 }
 
-// Funzione Stato Giocato
-function markAsPlayed(name) {
-      if (!excludedQuizzes.includes(name)) {
+// Funzione Toggle Vittoria/Completamento
+function toggleWin(name, btn) {
+      const parent = btn.closest('.quizItem');
+      if (!parent) return;
+
+      const isWon = parent.classList.contains('played-mode');
+      if (isWon) {
+            localStorage.removeItem('played_' + name);
+            parent.classList.remove('played-mode');
+            btn.classList.remove('is-won');
+            btn.setAttribute('aria-pressed', 'false');
+            btn.setAttribute('title', 'Segna come completato');
+            btn.setAttribute('aria-label', 'Segna come completato');
+      } else {
             const now = new Date().getTime();
             localStorage.setItem('played_' + name, now);
-            checkPlayedStatus();
+            parent.classList.add('played-mode');
+            btn.classList.add('is-won');
+            btn.setAttribute('aria-pressed', 'true');
+            btn.setAttribute('title', 'Completato! Clicca per annullare');
+            btn.setAttribute('aria-label', 'Completato! Clicca per annullare');
       }
+
+      updateProgressBar();
 }
 
 function checkPlayedStatus() {
       const now = new Date().getTime();
       const expiration = 24 * 60 * 60 * 1000; // 24 ore
 
-      document.querySelectorAll('.quizItem, .subQuizItem').forEach(item => {
+      document.querySelectorAll('.quizItem').forEach(item => {
             const name = item.getAttribute('data-name');
-            
-            // Se il quiz è tra quelli esclusi, saltiamo il controllo
-            if (excludedQuizzes.includes(name)) return;
+            const btnWin = item.querySelector('.btn-win');
+            if (!btnWin) return;
 
             const playedTime = localStorage.getItem('played_' + name);
 
             if (playedTime) {
                   if (now - playedTime < expiration) {
                         item.classList.add('played-mode');
-                        if (!item.querySelector('.check-mark')) {
-                              const quizNameSpan = item.querySelector('.quizName') || item.querySelector('.subQuizName');
-                              const check = document.createElement('img');
-                              check.src = "https://img.icons8.com/fluency/48/checkmark.png";
-                              check.className = "check-mark";
-                              check.alt = "Completato";
-                              check.width = 18;
-                              check.height = 18;
-                              quizNameSpan.appendChild(check);
-                        }
+                        btnWin.classList.add('is-won');
+                        btnWin.setAttribute('aria-pressed', 'true');
+                        btnWin.setAttribute('title', 'Completato! Clicca per annullare');
+                        btnWin.setAttribute('aria-label', 'Completato! Clicca per annullare');
                   } else {
                         localStorage.removeItem('played_' + name);
                         item.classList.remove('played-mode');
+                        btnWin.classList.remove('is-won');
+                        btnWin.setAttribute('aria-pressed', 'false');
+                        btnWin.setAttribute('title', 'Segna come completato');
+                        btnWin.setAttribute('aria-label', 'Segna come completato');
                   }
+            } else {
+                  item.classList.remove('played-mode');
+                  btnWin.classList.remove('is-won');
+                  btnWin.setAttribute('aria-pressed', 'false');
+                  btnWin.setAttribute('title', 'Segna come completato');
+                  btnWin.setAttribute('aria-label', 'Segna come completato');
             }
       });
 
       updateProgressBar();
 }
 
-// Listener Buttons
-document.querySelectorAll('.btn-go, .btn-sub-go').forEach(btn => {
-      btn.addEventListener('click', function() {
-            const parent = this.closest('.quizItem') || this.closest('.subQuizItem');
+// Listener per i bottoni Vittoria
+document.querySelectorAll('.btn-win').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const parent = this.closest('.quizItem');
             const name = parent.getAttribute('data-name');
-            markAsPlayed(name);
+            toggleWin(name, this);
       });
 });
 
