@@ -754,19 +754,6 @@ body {
   margin-top: var(--space-1);
 }
 
-.dropdown-info code {
-  display: inline-block;
-  margin-top: var(--space-1);
-  color: var(--accent);
-  background: var(--accent-tint);
-  padding: 2px 8px;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
 @keyframes slideDropdown {
   from {
     opacity: 0;
@@ -781,24 +768,15 @@ body {
 /* --------------------------------------------------------------------------
    7. Played Mode Status (Accessible & Clean)
    -------------------------------------------------------------------------- */
-.quizItem.played-mode,
-.subQuizItem.played-mode {
+.quizItem.played-mode {
   background: var(--played-bg);
   border-color: var(--played-border);
 }
 
-.played-mode .quizName,
-.played-mode .subQuizName {
+.played-mode .quizName {
   color: var(--text-secondary);
   text-decoration: line-through;
   text-decoration-color: var(--text-tertiary);
-}
-
-.check-mark {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------
